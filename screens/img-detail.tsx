@@ -30,8 +30,9 @@ const ImageDetail = () => {
   const handleShareImage = async () => {
     try {
       await Sharing.shareAsync(imageUri);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error: any) {
-      console.warn('Error sharing image:', error.message);
+      // console.warn('Error sharing image:', error.message);
     }
   };
 

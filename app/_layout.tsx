@@ -21,8 +21,9 @@ export default function RootLayout () {
             setSplashVisible(false);
           }, 2000);
         }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
-        console.warn(e);
+        // console.warn(e);
       }
     }
 

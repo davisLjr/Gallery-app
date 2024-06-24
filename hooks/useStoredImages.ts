@@ -22,8 +22,9 @@ const useStoredImages = () => {
         if (storedImages !== null) {
           setImages(JSON.parse(storedImages));
         }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
-        console.error('Error loading images from AsyncStorage:', error);
+        // console.error('Error loading images from AsyncStorage:', error);
       }
     };
 
@@ -35,8 +36,9 @@ const useStoredImages = () => {
       const newImages = [...images, image];
       setImages(newImages);
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newImages));
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      console.error('Error saving images to AsyncStorage:', error);
+      // console.error('Error saving images to AsyncStorage:', error);
     }
   };
 
@@ -45,8 +47,9 @@ const useStoredImages = () => {
       const updatedImages = images.filter(image => image.id !== id);
       setImages(updatedImages);
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(updatedImages));
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      console.error('Error removing image from AsyncStorage:', error);
+      // console.error('Error removing image from AsyncStorage:', error);
     }
   };
 
